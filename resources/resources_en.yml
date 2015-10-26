@@ -1,0 +1,56 @@
+# resources_en.yml
+---
+expression_empty_exception:         'Expression cannot be null or empty'
+interval_description_format:        'every %s days of the week'
+between_description_format:         '%s through %s'
+between_weekday_description_format: '%s through %s'
+on_the_day_of_the_month:            'on the {{nth}} %s of the month'
+on_the_of_the_month:                'on the %s of the month'
+on_the_last_of_the_month:           'on the last %s of the month'
+on_the_last_day_of_the_month:       'on the last day of the month'
+on_the_last_weekday_of_the_month:   'on the last weekday of the month'
+between_days_of_the_month:          'between day %s and %s of the month'
+seconds_through_past_the_minute:    'seconds %s through %s past the minute'
+between_x_and_y:                    'between %s and %s'
+past_the_hour:                      'past the hour'
+at_x_seconds_past_the_minute:       'at %s seconds past the minute'
+minutes_through_past_the_hour:      'minutes %s through %s past the hour'
+on_day_of_the_month:                'on day %s of the month'
+first_weekday:                      'first weekday'
+weekday_nearest_day:                'weekday nearest day %s'
+starting:             'starting'
+only_on:              'only on %s'
+only_in:              'only in %s'
+every_x_seconds:      'every %s seconds'
+every_minute_between: 'Every minute between %s and %s'
+every_second:         'every second'
+every_minute:         'every minute'
+every_1_minute:       'every 1 minute'
+every_hour:           'every hour'
+every_1_hour:         'every 1 hour'
+every_day:            'every day'
+every_1_day:          'every 1 day'
+every_year:           'every year'
+every_x:              'every %s'
+at_x:                 'at %s'
+on_x:                 'on %s'
+in_x:                 'in %s'
+first:   first
+second:  second
+third:   third
+fourth:  fourth
+fifth:   fifth
+time_pm: PM
+time_am: AM
+and:     and
+at:      At
+day:     day
+days:    days
+hour:    hour
+hours:   hours
+minute:  minute
+minutes: minutes
+month:   month
+months:  months
+year:    year
+years:   years

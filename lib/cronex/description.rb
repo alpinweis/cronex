@@ -1,0 +1,8 @@
+require_relative 'description/base'
+require_relative 'description/seconds'
+require_relative 'description/minutes'
+require_relative 'description/hours'
+require_relative 'description/day_of_week'
+require_relative 'description/day_of_month'
+require_relative 'description/month'
+require_relative 'description/year'

@@ -1,0 +1,47 @@
+Encoding:
+  Enabled: false
+
+AmbiguousOperator:
+  Enabled: false
+
+CaseIndentation:
+  Enabled: false
+
+CyclomaticComplexity:
+  Enabled: false
+  Max: 10
+
+PerceivedComplexity:
+  Enabled: false
+  Max: 10
+
+Documentation:
+  Enabled: false
+
+EmptyLinesAroundBody:
+  Enabled: false
+
+ClassLength:
+  Enabled: false
+
+LineLength:
+  Enabled: true
+  Max: 160
+
+MethodLength:
+  Enabled: false
+
+ModuleFunction:
+  Enabled: false
+
+NestedTernaryOperator:
+  Enabled: false
+
+RaiseArgs:
+  Enabled: false
+
+RescueModifier:
+  Enabled: false
+
+UnusedMethodArgument:
+  Enabled: false
