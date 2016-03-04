@@ -172,9 +172,9 @@ module Cronex
     def transform_case(desc, case_type = :lower)
       case case_type
       when :sentence
-        desc.sub(/\b[[:word:]]/u) {|s| Unicode.capitalize(s)}
+        desc.sub(/\b[[:word:]]/u) { |s| Unicode.upcase(s) }
       when :title
-        desc.gsub(/\b[[:word:]]/u) {|s| Unicode.upcase(s)}
+        desc.gsub(/\b[[:word:]]/u) { |s| Unicode.upcase(s) }
       else
         Unicode.downcase(desc)
       end

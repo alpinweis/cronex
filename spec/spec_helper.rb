@@ -10,6 +10,6 @@ RSpec.configure do |config|
   end
 
   def desc_pt_br(expression, opts = {})
-    Cronex::ExpressionDescriptor.new(expression, opts, 'pt-BR').description
+    Cronex::ExpressionDescriptor.new(expression, opts, 'pt_BR').description
   end
 end

@@ -1,4 +1,4 @@
-# resources_pt-BR.yml
+# resources_pt_BR.yml
 ---
 expression_empty_exception:         'A expressão não pode ser nula ou vazia'
 interval_description_format:        'a cada %s dias da semana'
@@ -54,22 +54,22 @@ month:   mês
 months:  mêses
 year:    ano
 years:   anos
-monday: segunda-feira
-tuesday: terça-feira
+monday:    segunda-feira
+tuesday:   terça-feira
 wednesday: quarta-feira
-thursday: quinta-feira
-friday: sexta-feira
-saturday: sábado
-sunday: domingo
-january: janeiro
-february: fevereiro
-march: março
-april: abril
-may: maio
-june: junho
-july: julho
-august: agosto
+thursday:  quinta-feira
+friday:    sexta-feira
+saturday:  sábado
+sunday:    domingo
+january:   janeiro
+february:  fevereiro
+march:     março
+april:     abril
+may:       maio
+june:      junho
+july:      julho
+august:    agosto
 september: setembro
-october: outubro
-november: novembro
-december: dezembro
+october:   outubro
+november:  novembro
+december:  dezembro
