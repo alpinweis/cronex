@@ -1,0 +1,75 @@
+# resources_pt-BR.yml
+---
+expression_empty_exception:         'A expressão não pode ser nula ou vazia'
+interval_description_format:        'a cada %s dias da semana'
+between_description_format:         'de %s a %s'
+between_weekday_description_format: 'de %s a %s'
+on_the_day_of_the_month:            'no(a) {{nth}} %s do mês'
+on_the_of_the_month:                'no %s do mês'
+on_the_last_of_the_month:           'no(a) último(a) %s do mês'
+on_the_last_day_of_the_month:       'no último dia do mês'
+on_the_last_weekday_of_the_month:   'no último dia útil do mês'
+between_days_of_the_month:          'entre os dias %s e %s do mês'
+seconds_through_past_the_minute:    'entre %s e %s segundos após o minuto'
+between_x_and_y:                    'entre %s e %s'
+past_the_hour:                      'após a hora'
+at_x_seconds_past_the_minute:       '%s segundos após o minuto'
+minutes_through_past_the_hour:      'entre %s e %s minutos após a hora'
+on_day_of_the_month:                'no dia %s do mês'
+first_weekday:                      'primeiro dia útil'
+weekday_nearest_day:                'dia útil mais próximo a %s'
+starting:             'iniciando'
+only_on:              'todo(a) %s'
+only_in:              'em %s'
+every_x_seconds:      'a cada %s segundos'
+every_minute_between: 'A cada minuto entre %s e %s'
+every_second:         'a cada segundo'
+every_minute:         'a cada minuto'
+every_1_minute:       'a cada 1 minuto'
+every_hour:           'a cada hora'
+every_1_hour:         'a cada 1 hora'
+every_day:            'todo dia'
+every_1_day:          'a cada 1 dia'
+every_year:           'a cada ano'
+every_x:              'a cada %s'
+at_x:                 '%s'
+on_x:                 '%s'
+in_x:                 'em %s'
+first:   primeiro(a)
+second:  segundo(a)
+third:   terceiro(a)
+fourth:  quarto(a)
+fifth:   quinto(a)
+time_pm: após meio-dia
+time_am: antes do meio-dia
+and:     e
+at:      às
+day:     dia
+days:    dias
+hour:    hora
+hours:   horas
+minute:  minuto
+minutes: minutos
+month:   mês
+months:  mêses
+year:    ano
+years:   anos
+monday: segunda-feira
+tuesday: terça-feira
+wednesday: quarta-feira
+thursday: quinta-feira
+friday: sexta-feira
+saturday: sábado
+sunday: domingo
+january: janeiro
+february: fevereiro
+march: março
+april: abril
+may: maio
+june: junho
+july: julho
+august: agosto
+september: setembro
+october: outubro
+november: novembro
+december: dezembro

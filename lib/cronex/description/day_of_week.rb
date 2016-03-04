@@ -13,11 +13,11 @@ module Cronex
         zero_based_dow = options[:zero_based_dow]
         invalid_dow = !zero_based_dow && dow_num <= 1
         if invalid_dow || (zero_based_dow && dow_num == 0)
-          return Cronex::Utils.day_of_week_name(0) # or 7 as in java DateTime().withDayOfWeek(7) for Sunday
+          return resources.get(Cronex::Utils.day_of_week_name(0).downcase) # or 7 as in java DateTime().withDayOfWeek(7) for Sunday
         elsif !zero_based_dow
           dow_num -= 1
         end
-        return Cronex::Utils.day_of_week_name(dow_num)
+        return resources.get(Cronex::Utils.day_of_week_name(dow_num).downcase)
       else
         return Date.parse(exp.capitalize).strftime('%A')
       end
