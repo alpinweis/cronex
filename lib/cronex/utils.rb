@@ -11,7 +11,14 @@ module Cronex
     end
 
     def number?(str)
-      Integer(str) rescue nil
+      Cronex::Utils.number(str) rescue nil
+    end
+
+    def number(str)
+      # Because fo following Integer() behavior
+      # https://www.ruby-forum.com/topic/62141
+      str.sub!(/^0+/, '')
+      Integer(str)
     end
 
     def day_of_week_name(number)
@@ -27,14 +34,14 @@ module Cronex
     end
 
     def format_time(hour_expression, minute_expression, second_expression = '')
-      hour = Integer(hour_expression)
+      hour = Cronex::Utils.number(hour_expression)
       period = hour >= 12 ? 'PM' : 'AM'
       hour -= 12 if hour > 12
-      minute = Integer(minute_expression)
+      minute = Cronex::Utils.number(minute_expression)
       minute = format('%02d', minute)
       second = ''
       if Cronex::Utils.present?(second_expression)
-        second = Integer(second_expression)
+        second = Cronex::Utils.number(second_expression)
         second = ':' + format('%02d', second)
       end
       format('%s:%s%s %s', hour, minute, second, period)
