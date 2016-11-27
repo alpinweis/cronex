@@ -1,7 +1,7 @@
 module Cronex
   class MonthDescription < Description
     def single_item_description(expression)
-      resources.get(DateTime.new(Time.now.year, Integer(expression), 1).strftime('%B').downcase)
+      resources.get(DateTime.new(Time.now.year, Cronex::Utils.number(expression), 1).strftime('%B').downcase)
     end
 
     def interval_description_format(expression)

@@ -9,7 +9,7 @@ module Cronex
       end
 
       if Cronex::Utils.number?(exp)
-        dow_num = Integer(exp)
+        dow_num = Cronex::Utils.number(exp)
         zero_based_dow = options[:zero_based_dow]
         invalid_dow = !zero_based_dow && dow_num <= 1
         if invalid_dow || (zero_based_dow && dow_num == 0)
