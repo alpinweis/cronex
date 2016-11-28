@@ -1,3 +1,6 @@
+### [0.4.0] - 2016-11-28
+* Fix handling leading zeros in numbers
+
 ### [0.3.0] - 2016-03-02
 * Add pt_BR translation
 

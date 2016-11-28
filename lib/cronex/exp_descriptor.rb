@@ -113,7 +113,7 @@ module Cronex
       else
         match = exp.match(/(\d{1,2}W)|(W\d{1,2})/)
         if match
-          day_num = Integer(match[0].gsub('W', ''))
+          day_num = Cronex::Utils.integer(match[0].gsub('W', ''))
           day_str = day_num == 1 ? resources.get('first_weekday') : format(resources.get('weekday_nearest_day'), day_num)
           description = format(', ' + resources.get('on_the_of_the_month'), day_str)
         else

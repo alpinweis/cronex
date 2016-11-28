@@ -20,7 +20,7 @@ module Cronex
     def parse(exp = expression)
       parsed_parts = Array.new(7, '')
 
-      fail ExpressionError, 'Error: Expression null or emtpy' unless Cronex::Utils.present?(exp)
+      fail ExpressionError, 'Error: Expression null or empty' unless Cronex::Utils.present?(exp)
       parts = sanitize(exp).split(' ')
       len = parts.size
 

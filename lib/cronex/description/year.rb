@@ -1,7 +1,7 @@
 module Cronex
   class YearDescription < Description
     def single_item_description(expression)
-      DateTime.new(Integer(expression)).strftime('%Y')
+      DateTime.new(Cronex::Utils.integer(expression)).strftime('%Y')
     end
 
     def interval_description_format(expression)

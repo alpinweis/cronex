@@ -55,8 +55,22 @@ module Cronex
       end
     end
 
-    it 'daily at time' do
-      expect(desc('30 11 * * *')).to eq('At 11:30 AM')
+    context 'daily:' do
+      it 'daily at /\d\d/:/\d\d/' do
+        expect(desc('30 11 * * *')).to eq('At 11:30 AM')
+      end
+
+      it 'daily at /\d/:/\d/' do
+        expect(desc('9 8 * * *')).to eq('At 8:09 AM')
+      end
+
+      it 'daily at /0[89]/:/0[89]/' do
+        expect(desc('09 08 * * *')).to eq('At 8:09 AM')
+      end
+
+      it 'daily at /0[1-7]/ /0[1-7/' do
+        expect(desc('02 01 * * *')).to eq('At 1:02 AM')
+      end
     end
 
     context 'time of day certain days of week:' do
