@@ -247,7 +247,8 @@ module Cronex
     end
 
     it 'second minutes hours intervals' do
-      expect(desc_fr('5-10 30-35 10-12 * * *')).to eq("Secondes 5 à 10 après la minute, minutes 30 à 35 après l'heure, entre 10:00 AM et 12:59 PM")
+      expect(desc_fr('5-10 30-35 10-12 * * *')).to eq(
+        "Secondes 5 à 10 après la minute, minutes 30 à 35 après l'heure, entre 10:00 AM et 12:59 PM")
     end
 
     it 'every 5 minutes at 30 seconds' do
@@ -326,7 +327,8 @@ module Cronex
       end
 
       it 'minutes past the hour 5/10 day 2' do
-        expect(desc_fr('5/10 0 2 * *')).to eq("Tous les 10 minutes, commence à 05 minutes après l'heure, le 2 de chaque mois")
+        expect(desc_fr('5/10 0 2 * *')).to eq(
+          "Tous les 10 minutes, commence à 05 minutes après l'heure, le 2 de chaque mois")
       end
     end
 
@@ -366,11 +368,13 @@ module Cronex
       end
 
       it 'month increments' do
-        expect(desc_fr('0 20 10 * 2/3 THU')).to eq('À 10:20 AM, seulement le jeudi, tous les 3 mois, commence en février')
+        expect(desc_fr('0 20 10 * 2/3 THU')).to eq(
+          'À 10:20 AM, seulement le jeudi, tous les 3 mois, commence en février')
       end
 
       it 'year increments' do
-        expect(desc_fr('0 0 0 1 MAR * 2010/5')).to eq('À 0:00 AM, le 1 de chaque mois, seulement en mars, tous les 5 ans, commence en 2010')
+        expect(desc_fr('0 0 0 1 MAR * 2010/5')).to eq(
+          'À 0:00 AM, le 1 de chaque mois, seulement en mars, tous les 5 ans, commence en 2010')
       end
     end
   end

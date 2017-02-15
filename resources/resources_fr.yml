@@ -1,4 +1,4 @@
-# resources_fr_FR.yml
+# resources_fr.yml
 ---
 expression_empty_exception:         "L'expression ne peut pas être nulle ou vide"
 interval_description_format:        'tous les %s jours de la semaine'
@@ -61,15 +61,15 @@ thursday:  jeudi
 friday:    vendredi
 saturday:  samedi
 sunday:    dimanche
-january:   'janvier'
-february:  'février'
-march:     'mars'
-april:     'avril'
-may:       'mai'
-june:      'juin'
-july:      'juillet'
-august:    'août'
-september: 'septembre'
-october:   'octobre'
-november:  'novembre'
-december:  'décembre'
+january:   janvier
+february:  février
+march:     mars
+april:     avril
+may:       mai
+june:      juin
+july:      juillet
+august:    août
+september: septembre
+october:   octobre
+november:  novembre
+december:  décembre

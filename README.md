@@ -44,6 +44,11 @@ Or install it yourself as:
 
     Cronex::ExpressionDescriptor.new('*/5 15 * * 1-5', zero_based_dow: false).description
     => Every 5 minutes, at 3:00 PM, Sunday through Thursday
+    
+#### Localization
+
+    Cronex::ExpressionDescriptor.new('30 2 * 2 1-5', {}, 'fr').description
+    => À 2:30 AM, lundi à vendredi, seulement en février
 
 See spec tests for more examples.
 
