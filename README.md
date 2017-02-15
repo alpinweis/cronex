@@ -16,6 +16,12 @@ Original Author & Credit: Brady Holt (http://www.geekytidbits.com).
 
 For a quick intro to cron see Quartz [Cron Tutorial](http://www.quartz-scheduler.org/documentation/quartz-1.x/tutorials/crontrigger).
 
+## Languages Available
+
+* English ([alpinweis](https://github.com/alpinweis))
+* Brazilian ([edsonlima](https://github.com/edsonlima))
+* French ([nanego](https://github.com/nanego))
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -44,7 +50,7 @@ Or install it yourself as:
 
     Cronex::ExpressionDescriptor.new('*/5 15 * * 1-5', zero_based_dow: false).description
     => Every 5 minutes, at 3:00 PM, Sunday through Thursday
-    
+
 #### Localization
 
     Cronex::ExpressionDescriptor.new('30 2 * 2 1-5', {}, 'fr').description
