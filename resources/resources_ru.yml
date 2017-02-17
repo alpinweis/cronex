@@ -1,0 +1,75 @@
+# resources_ru.yml
+---
+expression_empty_exception:         'Выражение не может быть нулевым или пустым'
+interval_description_format:        'каждые %s дня(ей) недели'
+between_description_format:         '%s - %s'
+between_weekday_description_format: '%s - %s'
+on_the_day_of_the_month:            'в {{nth}} %s месяца'
+on_the_of_the_month:                'в %s месяца'
+on_the_last_of_the_month:           'в последний %s месяца'
+on_the_last_day_of_the_month:       'в последний день месяца'
+on_the_last_weekday_of_the_month:   'в последний будний день месяца'
+between_days_of_the_month:          'с %s по %s число месяца'
+seconds_through_past_the_minute:    'секунды с %s по %s'
+between_x_and_y:                    'с %s по %s'
+past_the_hour:                      'часа'
+at_x_seconds_past_the_minute:       'в %s секунд'
+minutes_through_past_the_hour:      'минуты с %s по %s'
+on_day_of_the_month:                '%s число месяца'
+first_weekday:                      'первый будний день'
+weekday_nearest_day:                'ближайший будний день к %s'
+starting:             начало
+only_on:              'только %s'
+only_in:              'только %s'
+every_x_seconds:      'каждые %s секунд'
+every_minute_between: 'каждую минуту с %s по %s'
+every_second:         'каждую секунду'
+every_minute:         'каждую минуту'
+every_1_minute:       'каждую минуту'
+every_hour:           'каждый час'
+every_1_hour:         'каждый час'
+every_day:            'каждый день'
+every_1_day:          'каждый день'
+every_year:           'каждый год'
+every_x:              'каждые %s'
+at_x:                 'в %s'
+on_x:                 'в %s'
+in_x:                 'в %s'
+first:     первый
+second:    второй
+third:     третий
+fourth:    четвертый
+fifth:     пятый
+time_pm:   PM
+time_am:   AM
+and:       и
+at:        В
+day:       день
+days:      дня(ей)
+hour:      час
+hours:     часов
+minute:    минута
+minutes:   минут
+month:     месяц
+months:    месяцев
+year:      год
+years:     лет
+monday:    понедельник
+tuesday:   вторник
+wednesday: среда
+thursday:  четверг
+friday:    пятница
+saturday:  суббота
+sunday:    воскресенье
+january:   январь
+february:  февраль
+march:     март
+april:     апрель
+may:       май
+june:      июнь
+july:      июль
+august:    август
+september: сентябрь
+october:   октябрь
+november:  ноябрь
+december:  декабрь

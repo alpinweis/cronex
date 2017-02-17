@@ -35,25 +35,25 @@ every_x:              'every %s'
 at_x:                 'at %s'
 on_x:                 'on %s'
 in_x:                 'in %s'
-first:   first
-second:  second
-third:   third
-fourth:  fourth
-fifth:   fifth
-time_pm: PM
-time_am: AM
-and:     and
-at:      At
-day:     day
-days:    days
-hour:    hour
-hours:   hours
-minute:  minute
-minutes: minutes
-month:   month
-months:  months
-year:    year
-years:   years
+first:     first
+second:    second
+third:     third
+fourth:    fourth
+fifth:     fifth
+time_pm:   PM
+time_am:   AM
+and:       and
+at:        At
+day:       day
+days:      days
+hour:      hour
+hours:     hours
+minute:    minute
+minutes:   minutes
+month:     month
+months:    months
+year:      year
+years:     years
 monday:    Monday
 tuesday:   Tuesday
 wednesday: Wednesday

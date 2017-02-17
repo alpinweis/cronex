@@ -1,0 +1,75 @@
+# resources_ro.yml
+---
+expression_empty_exception:         'Expresia nu poate fi vidă sau nulă'
+interval_description_format:        'în fiecare %s zile din săptămână'
+between_description_format:         'din %s până în %s'
+between_weekday_description_format: 'de %s până %s'
+on_the_day_of_the_month:            'în {{nth}} %s a lunii'
+on_the_of_the_month:                'în %s ale lunii'
+on_the_last_of_the_month:           'în ultima %s din lună'
+on_the_last_day_of_the_month:       'în ultima zi a lunii'
+on_the_last_weekday_of_the_month:   'în ultima zi din săptămână a lunii'
+between_days_of_the_month:          'între a %s-a și a %s-a zi a lunii'
+seconds_through_past_the_minute:    'între secundele %s și %s'
+between_x_and_y:                    'între %s și %s'
+past_the_hour:                      'în fiecare oră'
+at_x_seconds_past_the_minute:       'la secunda %s'
+minutes_through_past_the_hour:      'între minutele %s și %s'
+on_day_of_the_month:                'în a %s-a zi a lunii'
+first_weekday:                      'prima zi din săptămână'
+weekday_nearest_day:                'cea mai apropiată %s din săptămână'
+starting:             pornire
+only_on:              'numai %s'
+only_in:              'numai în %s'
+every_x_seconds:      'la fiecare %s secunde'
+every_minute_between: 'în fiecare minut între %s și %s'
+every_second:         'în fiecare secundă'
+every_minute:         'în fiecare minut'
+every_1_minute:       'din minut în minut'
+every_hour:           'în fiecare oră'
+every_1_hour:         'din oră în oră'
+every_day:            'în fiecare zi'
+every_1_day:          'în fiecare zi'
+every_year:           'în fiecare an'
+every_x:              'la fiecare %s'
+at_x:                 'la %s'
+on_x:                 'de %s'
+in_x:                 'în %s'
+first:     prima
+second:    'a doua'
+third:     'a treia'
+fourth:    'a patra'
+fifth:     'a cincea'
+time_pm:   PM
+time_am:   AM
+and:       și
+at:        la
+day:       zi
+days:      zile
+hour:      oră
+hours:     ore
+minute:    minut
+minutes:   minute
+month:     lună
+months:    luni
+year:      an
+years:     ani
+monday:    luni
+tuesday:   marți
+wednesday: miercuri
+thursday:  joi
+friday:    vineri
+saturday:  sâmbătă
+sunday:    duminică
+january:   ianuarie
+february:  februarie
+march:     martie
+april:     aprilie
+may:       mai
+june:      iunie
+july:      iulie
+august:    august
+september: septembrie
+october:   octombrie
+november:  noiembrie
+december:  decembrie

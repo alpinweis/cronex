@@ -19,11 +19,13 @@ Original Author & Credit: Brady Holt (http://www.geekytidbits.com).
 
 For a quick intro to cron see Quartz [Cron Tutorial](http://www.quartz-scheduler.org/documentation/quartz-1.x/tutorials/crontrigger).
 
-## Languages Available
+## Available Locales
 
-* English ([alpinweis](https://github.com/alpinweis))
-* Brazilian ([edsonlima](https://github.com/edsonlima))
-* French ([nanego](https://github.com/nanego))
+* English
+* Brazilian
+* French
+* Romanian
+* Russian
 
 ## Installation
 

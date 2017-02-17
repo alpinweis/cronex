@@ -35,25 +35,25 @@ every_x:              'a cada %s'
 at_x:                 '%s'
 on_x:                 '%s'
 in_x:                 'em %s'
-first:   primeiro(a)
-second:  segundo(a)
-third:   terceiro(a)
-fourth:  quarto(a)
-fifth:   quinto(a)
-time_pm: após meio-dia
-time_am: antes do meio-dia
-and:     e
-at:      às
-day:     dia
-days:    dias
-hour:    hora
-hours:   horas
-minute:  minuto
-minutes: minutos
-month:   mês
-months:  mêses
-year:    ano
-years:   anos
+first:     primeiro(a)
+second:    segundo(a)
+third:     terceiro(a)
+fourth:    quarto(a)
+fifth:     quinto(a)
+time_pm:   após meio-dia
+time_am:   antes do meio-dia
+and:       e
+at:        às
+day:       dia
+days:      dias
+hour:      hora
+hours:     horas
+minute:    minuto
+minutes:   minutos
+month:     mês
+months:    mêses
+year:      ano
+years:     anos
 monday:    segunda-feira
 tuesday:   terça-feira
 wednesday: quarta-feira

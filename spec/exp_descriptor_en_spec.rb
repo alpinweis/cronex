@@ -1,7 +1,12 @@
+# encoding: utf-8
 require 'cronex'
 
 module Cronex
   describe ExpressionDescriptor do
+
+    def desc(expression, opts = {})
+      Cronex::ExpressionDescriptor.new(expression, opts, 'en').description
+    end
 
     let(:opts) { { zero_based_dow: false } }
 

@@ -17,13 +17,13 @@ at_x_seconds_past_the_minute:       'à %s secondes après la minute'
 minutes_through_past_the_hour:      "minutes %s à %s après l'heure"
 on_day_of_the_month:                'le %s de chaque mois'
 first_weekday:                      'premier jour de la semaine'
-weekday_nearest_day:                'le jour de semaine le plus proche du %s'
-starting:             'commence'
-only_on:              'seulement le %s'
+weekday_nearest_day:                'jour de semaine le plus proche du %s'
+starting:             'commence' # départ
+only_on:              'seulement le %s' # uniquement le
 only_in:              'seulement en %s'
 every_x_seconds:      'toutes les %s secondes'
-every_minute_between: 'Chaque minute entre %s et %s'
-every_second:         'Chaque seconde'
+every_minute_between: 'chaque minute entre %s et %s'
+every_second:         'chaque seconde'
 every_minute:         'chaque minute'
 every_1_minute:       'toutes les 1 minutes'
 every_hour:           'chaque heure'
@@ -35,25 +35,25 @@ every_x:              'tous les %s'
 at_x:                 'à %s'
 on_x:                 'le %s'
 in_x:                 'en %s'
-first:   premier
-second:  second
-third:   troisieme
-fourth:  quatrieme
-fifth:   cinquieme
-time_pm: PM
-time_am: AM
-and:     et
-at:      À
-day:     jour
-days:    jours
-hour:    heure
-hours:   heures
-minute:  minute
-minutes: minutes
-month:   mois
-months:  mois
-year:    an
-years:   ans
+first:     premier
+second:    second
+third:     troisième
+fourth:    quatrième
+fifth:     cinquième
+time_pm:   PM
+time_am:   AM
+and:       et
+at:        À
+day:       jour
+days:      jours
+hour:      heure
+hours:     heures
+minute:    minute
+minutes:   minutes
+month:     mois
+months:    mois
+year:      an
+years:     ans
 monday:    lundi
 tuesday:   mardi
 wednesday: mercredi
