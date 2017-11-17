@@ -34,7 +34,7 @@ module Cronex
     def description_format(expression)
       if expression.include?('#')
         dow_num = expression.split('#').last
-        days = Hash[%w(1 2 3 4 5).zip(%w(first second third forth fifth))]
+        days = Hash[%w(1 2 3 4 5).zip(%w(first second third fourth fifth))]
         dow_desc = days[dow_num]
         dow_desc = dow_desc ? resources.get(dow_desc) : ''
         ', ' + resources.get('on_the_day_of_the_month').gsub(/{{.*}}/, dow_desc)

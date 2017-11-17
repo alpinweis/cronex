@@ -1,3 +1,6 @@
+### [0.6.1] - 2017-11-17
+* Fix 4th day spelling
+
 ### [0.6.0] - 2017-02-17
 * Add romanian and russian locales
 * Minor fixes to the french locale
