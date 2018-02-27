@@ -311,6 +311,10 @@ module Cronex
       expect(desc('23 12 * JAN-MAR * 2013-2015')).to eq('At 12:23 PM, January through March, 2013 through 2015')
     end
 
+    it 'hours ranges' do
+      expect(desc("10,11 2,4-5 * * *")).to eq('At 10 and 11 minutes past the hour, between 2:00 AM,4:00 AM and 5:59 AM')
+    end
+
     context 'multi part range seconds:' do
       it 'multi part range seconds 2,4-5' do
         expect(desc('2,4-5 1 * * *')).to eq('Minutes 02,04 through 05 past the hour, at 1:00 AM')
