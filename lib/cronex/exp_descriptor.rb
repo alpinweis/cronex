@@ -162,8 +162,7 @@ module Cronex
       month_desc = month_description(expression_parts)
       dow_desc = day_of_week_description(expression_parts)
       year_desc = year_description(expression_parts)
-      day_desc = expression_parts[3] == '*' ? dow_desc : dom_desc
-      description = format('%s%s%s%s', time_segment, day_desc, month_desc, year_desc)
+      description = format('%s%s%s%s%s', time_segment, dom_desc, dow_desc, month_desc, year_desc)
       description = transform_verbosity(description, options[:verbose])
       description = transform_case(description, options[:casing])
       description
