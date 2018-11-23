@@ -180,7 +180,7 @@ module Cronex
       expect(desc('23 12 15 * *')).to eq('La 12:23 PM, în a 15-a zi a lunii')
     end
 
-    it 'day of month includes day of week' do
+    it 'day of month with day of week' do
       expect(desc('23 12 15 * SUN')).to eq('La 12:23 PM, în a 15-a zi a lunii, numai duminică')
     end
 

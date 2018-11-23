@@ -180,7 +180,7 @@ module Cronex
       expect(desc('23 12 15 * *')).to eq('À 12:23 PM, le 15 de chaque mois')
     end
 
-    it 'day of month includes day of week' do
+    it 'day of month with day of week' do
       expect(desc('23 12 15 * SUN')).to eq('À 12:23 PM, le 15 de chaque mois, seulement le dimanche')
     end
 

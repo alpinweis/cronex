@@ -180,7 +180,7 @@ module Cronex
       expect(desc('23 12 15 * *')).to eq('В 12:23 PM, 15 число месяца')
     end
 
-    it 'day of month includes day of week' do
+    it 'day of month with day of week' do
       expect(desc('23 12 15 * SUN')).to eq('В 12:23 PM, 15 число месяца, только воскресенье')
     end
 

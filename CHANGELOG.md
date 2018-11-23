@@ -1,3 +1,6 @@
+### [0.7.0] - 2018-11-22
+* Include day of week when day of month is specified
+
 ### [0.6.1] - 2017-11-17
 * Fix 4th day spelling
 
