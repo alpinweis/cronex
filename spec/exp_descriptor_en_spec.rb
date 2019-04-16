@@ -383,11 +383,21 @@ module Cronex
       it 'minute span' do
         tz = TZInfo::Timezone.get('America/Los_Angeles')
         result = if tz.period_for_local(Time.now).zone_identifier.to_s == 'PDT'
-                   'Every minute between 3:00 AM and 3:10 AM'
+                   'Every minute between 4:00 AM and 4:10 AM'
                  else
-                   'Every minute between 2:00 AM and 2:10 AM'
+                   'Every minute between 3:00 AM and 3:10 AM'
                  end
         expect(desc('0-10 11 * * *', timezone: 'America/Los_Angeles')).to eq(result)
+      end
+
+      it 'twice a day' do
+        tz = TZInfo::Timezone.get('America/Los_Angeles')
+        result = if tz.period_for_local(Time.now).zone_identifier.to_s == 'PDT'
+                   'At 5:00 PM and 5:00 AM'
+                 else
+                   'At 4:00 PM and 4:00 AM'
+                 end
+        expect(desc('0 0,12 * * *', timezone: 'America/Los_Angeles')).to eq(result)
       end
     end
   end

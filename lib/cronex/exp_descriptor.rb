@@ -142,7 +142,7 @@ module Cronex
         # Hours list with single minute (e.g. 30 6,14,16)
         hour_parts = hour_exp.split(',')
         description += resources.get('at')
-        h_parts = hour_parts.map { |part| ' ' + Cronex::Utils.format_time(part, min_exp) }
+        h_parts = hour_parts.map { |part| ' ' + Cronex::Utils.format_time(part, min_exp, '', options[:timezone]) }
         description += h_parts[0...-1].join(',') + ' ' + resources.get('and') + h_parts.last
       else
         sec_desc = seconds_description(expression_parts)

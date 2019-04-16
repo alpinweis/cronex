@@ -39,7 +39,7 @@ module Cronex
       minute = integer(minute_expression)
       second = integer(second_expression)
       tz = TZInfo::Timezone.get(timezone)
-      time = tz.utc_to_local(Time.utc(2000, 1, 1, hour, minute, second))
+      time = tz.utc_to_local(Date.today.to_time + hour * 60 * 60 + minute * 60 + second)
       format = present?(second_expression) ? '%l:%M:%S %p' : '%l:%M %p'
       time.strftime(format).lstrip
     end
