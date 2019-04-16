@@ -16,6 +16,7 @@ Original Author & Credit: Brady Holt (http://www.geekytidbits.com).
  * Provides casing options (sentence, title, lower)
  * Support for non-standard non-zero-based week day numbers
  * Supports printing to locale specific human readable format
+ * Supports displaying times in specific timezones
 
 For a quick intro to cron see Quartz [Cron Tutorial](http://www.quartz-scheduler.org/documentation/quartz-1.x/tutorials/crontrigger).
 
@@ -60,6 +61,11 @@ Or install it yourself as:
 
     Cronex::ExpressionDescriptor.new('30 2 * 2 1-5', {}, 'fr').description
     => À 2:30 AM, lundi à vendredi, seulement en février
+
+#### Timezones
+
+    Cronex::ExpressionDescriptor.new('0-10 11 * * *', timezone: 'America/Los_Angeles').description
+    => Every minute between 3:00 AM and 3:10 AM
 
 See spec tests for more examples.
 
