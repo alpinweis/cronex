@@ -12,7 +12,8 @@ module Cronex
     verbose: false,
     zero_based_dow: true,
     use_24_hour_time_format: false,
-    throw_exception_on_parse_error: true
+    throw_exception_on_parse_error: true,
+    timezone: 'UTC'
   }
 
   class ExpressionDescriptor
@@ -129,14 +130,14 @@ module Cronex
       description = ''
       if [sec_exp, min_exp, hour_exp].all? { |exp| !Cronex::Utils.include_any?(exp, SPECIAL_CHARS) }
         # specific time of day (i.e. 10 14)
-        description += resources.get('at') + ' ' + Cronex::Utils.format_time(hour_exp, min_exp, sec_exp)
+        description += resources.get('at') + ' ' + Cronex::Utils.format_time(hour_exp, min_exp, sec_exp, options[:timezone])
       elsif min_exp.include?('-') && !min_exp.include?('/') && !min_exp.include?(',') && !Cronex::Utils.include_any?(hour_exp, SPECIAL_CHARS)
         # Minute range in single hour (e.g. 0-10 11)
         min_parts = min_exp.split('-')
         description += format(
           resources.get('every_minute_between'),
-          Cronex::Utils.format_time(hour_exp, min_parts[0]),
-          Cronex::Utils.format_time(hour_exp, min_parts[1]))
+          Cronex::Utils.format_time(hour_exp, min_parts[0], '', options[:timezone]),
+          Cronex::Utils.format_time(hour_exp, min_parts[1], '', options[:timezone]))
       elsif hour_exp.include?(',') && !Cronex::Utils.include_any?(min_exp, SPECIAL_CHARS)
         # Hours list with single minute (e.g. 30 6,14,16)
         hour_parts = hour_exp.split(',')

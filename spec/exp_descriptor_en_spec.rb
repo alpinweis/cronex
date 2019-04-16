@@ -375,7 +375,19 @@ module Cronex
       end
 
       it 'year increments' do
-        expect(desc('0 0 0 1 MAR * 2010/5')).to eq('At 0:00 AM, on day 1 of the month, only in March, every 5 years, starting in 2010')
+        expect(desc('0 0 0 1 MAR * 2010/5')).to eq('At 12:00 AM, on day 1 of the month, only in March, every 5 years, starting in 2010')
+      end
+    end
+
+    context 'timezone' do
+      it 'minute span' do
+        tz = TZInfo::Timezone.get('America/Los_Angeles')
+        result = if tz.period_for_local(Time.now).zone_identifier.to_s == 'PDT'
+                   'Every minute between 3:00 AM and 3:10 AM'
+                 else
+                   'Every minute between 2:00 AM and 2:10 AM'
+                 end
+        expect(desc('0-10 11 * * *', timezone: 'America/Los_Angeles')).to eq(result)
       end
     end
   end

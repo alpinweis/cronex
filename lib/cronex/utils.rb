@@ -1,3 +1,5 @@
+require 'tzinfo'
+
 module Cronex
   module Utils
     extend self
@@ -17,7 +19,7 @@ module Cronex
     def integer(str)
       # strip leading zeros in numbers to prevent '08', '09'
       # from being treated as invalid octals
-      Integer(str.sub(/^0*(\d+)/, '\1'))
+      Integer(str.sub(/^0*(\d+)/, '\1')) rescue 0
     end
 
     def day_of_week_name(number)
@@ -32,18 +34,14 @@ module Cronex
       end
     end
 
-    def format_time(hour_expression, minute_expression, second_expression = '')
+    def format_time(hour_expression, minute_expression, second_expression = '', timezone = 'UTC')
       hour = integer(hour_expression)
-      period = hour >= 12 ? 'PM' : 'AM'
-      hour -= 12 if hour > 12
       minute = integer(minute_expression)
-      minute = format('%02d', minute)
-      second = ''
-      if present?(second_expression)
-        second = integer(second_expression)
-        second = ':' + format('%02d', second)
-      end
-      format('%s:%s%s %s', hour, minute, second, period)
+      second = integer(second_expression)
+      tz = TZInfo::Timezone.get(timezone)
+      time = tz.utc_to_local(Time.utc(2000, 1, 1, hour, minute, second))
+      format = present?(second_expression) ? '%l:%M:%S %p' : '%l:%M %p'
+      time.strftime(format).lstrip
     end
   end
 end

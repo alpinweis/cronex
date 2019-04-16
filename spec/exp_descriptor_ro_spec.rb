@@ -375,7 +375,7 @@ module Cronex
       end
 
       it 'year increments' do
-        expect(desc('0 0 0 1 MAR * 2010/5')).to eq('La 0:00 AM, în a 1-a zi a lunii, numai în martie, la fiecare 5 ani, pornire în 2010')
+        expect(desc('0 0 0 1 MAR * 2010/5')).to eq('La 12:00 AM, în a 1-a zi a lunii, numai în martie, la fiecare 5 ani, pornire în 2010')
       end
     end
   end
