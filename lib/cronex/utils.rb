@@ -33,17 +33,19 @@ module Cronex
     end
 
     def format_time(hour_expression, minute_expression, second_expression = '')
-      hour = integer(hour_expression)
-      period = hour >= 12 ? 'PM' : 'AM'
-      hour -= 12 if hour > 12
-      minute = integer(minute_expression)
-      minute = format('%02d', minute)
-      second = ''
-      if present?(second_expression)
-        second = integer(second_expression)
-        second = ':' + format('%02d', second)
-      end
-      format('%s:%s%s %s', hour, minute, second, period)
+      hour_expression.split(',').map do |hour_exp|
+        hour = integer(hour_exp)
+        period = hour >= 12 ? 'PM' : 'AM'
+        hour -= 12 if hour > 12
+        minute = integer(minute_expression)
+        minute = format('%02d', minute)
+        second = ''
+        if present?(second_expression)
+          second = integer(second_expression)
+          second = ':' + format('%02d', second)
+        end
+        format('%s:%s%s %s', hour, minute, second, period)
+      end.join(',')
     end
   end
 end
