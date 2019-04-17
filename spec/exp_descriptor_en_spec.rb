@@ -4,8 +4,8 @@ require 'cronex'
 module Cronex
   describe ExpressionDescriptor do
 
-    def desc(expression, opts = {})
-      Cronex::ExpressionDescriptor.new(expression, opts, 'en').description
+    def desc(expression, opts = {}, timezone = 'UTC')
+      Cronex::ExpressionDescriptor.new(expression, opts, 'en', timezone).description
     end
 
     let(:opts) { { zero_based_dow: false } }
@@ -382,22 +382,14 @@ module Cronex
     context 'timezone' do
       it 'minute span' do
         tz = TZInfo::Timezone.get('America/Los_Angeles')
-        result = if tz.period_for_local(Time.now).zone_identifier.to_s == 'PDT'
-                   'Every minute between 4:00 AM and 4:10 AM'
-                 else
-                   'Every minute between 3:00 AM and 3:10 AM'
-                 end
-        expect(desc('0-10 11 * * *', timezone: 'America/Los_Angeles')).to eq(result)
+        hour = tz.period_for_local(Time.now).zone_identifier.to_s == 'PDT' ? 4 : 3
+        expect(desc('0-10 11 * * *', {}, 'America/Los_Angeles')).to eq("Every minute between #{hour}:00 AM and #{hour}:10 AM")
       end
 
       it 'twice a day' do
         tz = TZInfo::Timezone.get('America/Los_Angeles')
-        result = if tz.period_for_local(Time.now).zone_identifier.to_s == 'PDT'
-                   'At 5:00 PM and 5:00 AM'
-                 else
-                   'At 4:00 PM and 4:00 AM'
-                 end
-        expect(desc('0 0,12 * * *', timezone: 'America/Los_Angeles')).to eq(result)
+        hour = tz.period_for_local(Time.now).zone_identifier.to_s == 'PDT' ? 5 : 4
+        expect(desc('0 0,12 * * *', {}, 'America/Los_Angeles')).to eq("At #{hour}:00 PM and #{hour}:00 AM")
       end
     end
   end
