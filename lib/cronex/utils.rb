@@ -19,7 +19,7 @@ module Cronex
     def integer(str)
       # strip leading zeros in numbers to prevent '08', '09'
       # from being treated as invalid octals
-      Integer(str.sub(/^0*(\d+)/, '\1')) rescue 0
+      Integer(str.sub(/^0*(\d+)/, '\1'))
     end
 
     def day_of_week_name(number)
@@ -37,7 +37,7 @@ module Cronex
     def format_time(hour_expression, minute_expression, second_expression = '', timezone = 'UTC')
       hour = integer(hour_expression)
       minute = integer(minute_expression)
-      second = integer(second_expression)
+      second = second_expression == '' ? 0 : integer(second_expression)
       tz = TZInfo::Timezone.get(timezone)
       time = tz.utc_to_local(Date.today.to_time + hour * 60 * 60 + minute * 60 + second)
       format = present?(second_expression) ? '%l:%M:%S %p' : '%l:%M %p'

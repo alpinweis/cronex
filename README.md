@@ -65,7 +65,8 @@ Or install it yourself as:
 #### Timezones
 
     Cronex::ExpressionDescriptor.new('0-10 11 * * *', timezone: 'America/Los_Angeles').description
-    => Every minute between 3:00 AM and 3:10 AM
+    => Every minute between 5:00 AM and 5:10 AM # PDT or
+    => Every minute between 4:00 AM and 4:10 AM # PST
 
 See spec tests for more examples.
 
