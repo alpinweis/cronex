@@ -1,3 +1,6 @@
+### [0.8.0] - 2019-04-18
+* Add support for timezones
+
 ### [0.7.0] - 2018-11-22
 * Include day of week when day of month is specified
 
