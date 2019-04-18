@@ -1,7 +1,7 @@
 module Cronex
   class HoursDescription < Description
-    def single_item_description(expression)
-      Cronex::Utils.format_time(expression, '0')
+    def single_item_description(expression, timezone = 'UTC')
+      Cronex::Utils.format_time(expression, '0', '', timezone)
     end
 
     def interval_description_format(expression)
