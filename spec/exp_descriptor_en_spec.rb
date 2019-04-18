@@ -391,6 +391,12 @@ module Cronex
         hour = tz.period_for_local(Time.now).zone_identifier.to_s == 'PDT' ? 5 : 4
         expect(desc('0 0,12 * * *', {}, 'America/Los_Angeles')).to eq("At #{hour}:00 PM and #{hour}:00 AM")
       end
+
+      it 'ahead of GMT' do
+        tz = TZInfo::Timezone.get('Europe/Vienna')
+        hour = tz.period_for_local(Time.now).zone_identifier.to_s == 'CEST' ? 1 : 12
+        expect(desc('0-10 11 * * *', {}, 'Europe/Vienna')).to eq("Every minute between #{hour}:00 PM and #{hour}:10 PM")
+      end
     end
   end
 end
