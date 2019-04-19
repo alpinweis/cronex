@@ -1,3 +1,6 @@
+### [0.9.0] - 2019-04-21
+* Add german locale
+
 ### [0.8.0] - 2019-04-18
 * Add support for timezones
 
