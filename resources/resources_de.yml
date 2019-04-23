@@ -1,0 +1,75 @@
+# resources_de.yml
+---
+expression_empty_exception:         'Ausdruck darf nicht null oder leer sein'
+interval_description_format:        'jeden %s Tag der Woche'
+between_description_format:         '%s bis %s'
+between_weekday_description_format: '%s bis %s'
+on_the_day_of_the_month:            'am {{nth}} %s des Monats'
+on_the_of_the_month:                'am %s des Monats'
+on_the_last_of_the_month:           'am letzten %s des Monats'
+on_the_last_day_of_the_month:       'am letzten Tag des Monats'
+on_the_last_weekday_of_the_month:   'am letzen Werktag des Monats'
+between_days_of_the_month:          'zwischen Tag %s und %s des Monats'
+seconds_through_past_the_minute:    'Sekunden %s bis %s vergangene Minute'
+between_x_and_y:                    'zwischen %s und %s'
+past_the_hour:                      'vergangene Stunde'
+at_x_seconds_past_the_minute:       'am %s Sekunden nach der vergangenen Minute'
+minutes_through_past_the_hour:      'Minuten %s bis %s nach der vergangenen Stunde'
+on_day_of_the_month:                'am %s Tag des Monats'
+first_weekday:                      'Erster Wochentag'
+weekday_nearest_day:                'Wochentag zum nächsten Tag %s'
+starting:             'beginnend'
+only_on:              'nur an %s'
+only_in:              'nur in %s'
+every_x_seconds:      'Alle %s Sekunden'
+every_minute_between: 'Jede Minute zwischen %s und %s'
+every_second:         'Jede Sekunde'
+every_minute:         'Jede Minute'
+every_1_minute:       'Jede 1. Minute'
+every_hour:           'Jede Stunde'
+every_1_hour:         'Jede 1. Stunde'
+every_day:            'Jeden Tag'
+every_1_day:          'Jeden 1. Tag'
+every_year:           'Jedes Jahr'
+every_x:              'Alle %s'
+at_x:                 'um %s'
+on_x:                 'an %s'
+in_x:                 'in %s'
+first:     ersten
+second:    zweiten
+third:     dritten
+fourth:    vierten
+fifth:     fünften
+time_pm:   PM
+time_am:   AM
+and:       und
+at:        Um
+day:       Tag
+days:      Tagen
+hour:      Stunde
+hours:     Stunden
+minute:    Minute
+minutes:   Minuten
+month:     Monat
+months:    Monaten
+year:      Jahr
+years:     Jahren
+monday:    Montag
+tuesday:   Dienstag
+wednesday: Mittwoch
+thursday:  Donnerstag
+friday:    Freitag
+saturday:  Samstag
+sunday:    Sonntag
+january:   Januar
+february:  Februar
+march:     März
+april:     April
+may:       Mai
+june:      Juni
+july:      Juli
+august:    August
+september: September
+october:   Oktober
+november:  November
+december:  Dezember
