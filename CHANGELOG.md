@@ -1,3 +1,6 @@
+### [0.9.1] - 2019-11-26
+* Update tzinfo dependency
+
 ### [0.9.0] - 2019-04-21
 * Add german locale
 
