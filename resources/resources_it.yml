@@ -1,0 +1,75 @@
+# resources_it.yml
+---
+expression_empty_exception:         "L'espressione non puó essere null o vuota"
+interval_description_format:        '%s giorni alla settimana'
+between_description_format:         'da %s a %s'
+between_weekday_description_format: 'da %s a %s'
+on_the_day_of_the_month:            'il(la) {{nth}}(a) %s del mese'
+on_the_of_the_month:                'il %s del mese'
+on_the_last_of_the_month:           "l'ultimo(a) %s del mese"
+on_the_last_day_of_the_month:       "l'ultimo giorno del mese"
+on_the_last_weekday_of_the_month:   "l'ultimo giorno lavorativo del mese"
+between_days_of_the_month:          'tra il giorno %s e il giorno %s del mese'
+seconds_through_past_the_minute:    'dal secondo %s al %s dopo il minuto'
+between_x_and_y:                    'tra le %s e le %s'
+past_the_hour:                      "dopo l'ora"
+at_x_seconds_past_the_minute:       'a %s secondi dopo il minuto'
+minutes_through_past_the_hour:      "dal minuto %s al %s dopo l'ora"
+on_day_of_the_month:                'il giorno %s del mese'
+first_weekday:                      'il primo giorno della settimana lavorativa'
+weekday_nearest_day:                'il prossimo giorno %s della settimana lavorativa'
+starting:             'a partire da'
+only_on:              'solo di %s'
+only_in:              'solo a(nel) %s'
+every_x_seconds:      'ogni %s secondi'
+every_minute_between: 'ogni minuto tra le %s e le %s'
+every_second:         'ogni secondo'
+every_minute:         'ogni minuto'
+every_1_minute:       'ogni minuto'
+every_hour:           'ogni ora'
+every_1_hour:         'ogni ora'
+every_day:            'ogni giorno'
+every_1_day:          'ogni giorno'
+every_year:           'ogni anno'
+every_x:              'ogni %s'
+at_x:                 'alle(ai) %s'
+on_x:                 'il %s'
+in_x:                 '%s'
+first:     primo
+second:    secondo
+third:     terzo
+fourth:    quarto
+fifth:     quinto
+time_pm:   pomeriggio
+time_am:   mattino
+and:       e
+at:        alle(ai)
+day:       giorno
+days:      giorni
+hour:      ora
+hours:     ore
+minute:    minuto
+minutes:   minuti
+month:     mese
+months:    mesi
+year:      anno
+years:     anni
+monday:    lunedì
+tuesday:   martedì
+wednesday: mercoledì
+thursday:  giovedì
+friday:    venerdì
+saturday:  sabato
+sunday:    domenica
+january:   gennaio
+february:  febbraio
+march:     marzo
+april:     aprile
+may:       maggio
+june:      giugno
+july:      luglio
+august:    agosto
+september: settembre
+october:   ottobre
+november:  novembre
+december:  dicembre
