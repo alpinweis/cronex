@@ -1,47 +1,56 @@
-Encoding:
+Style/Encoding:
   Enabled: false
 
-AmbiguousOperator:
+Lint/AmbiguousOperator:
   Enabled: false
 
-CaseIndentation:
+Layout/CaseIndentation:
   Enabled: false
 
-CyclomaticComplexity:
-  Enabled: false
-  Max: 10
-
-PerceivedComplexity:
+Metrics/CyclomaticComplexity:
   Enabled: false
   Max: 10
 
-Documentation:
+Metrics/PerceivedComplexity:
+  Enabled: false
+  Max: 10
+
+Style/Documentation:
   Enabled: false
 
-EmptyLinesAroundBody:
+Layout/EmptyLinesAroundBlockBody:
   Enabled: false
 
-ClassLength:
+Layout/EmptyLinesAroundClassBody:
   Enabled: false
 
-LineLength:
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/LineLength:
   Enabled: true
   Max: 160
 
-MethodLength:
+Metrics/MethodLength:
   Enabled: false
 
-ModuleFunction:
+Style/ModuleFunction:
   Enabled: false
 
-NestedTernaryOperator:
+Style/NestedTernaryOperator:
   Enabled: false
 
-RaiseArgs:
+Style/RaiseArgs:
   Enabled: false
 
-RescueModifier:
+Style/RescueModifier:
   Enabled: false
 
-UnusedMethodArgument:
+Lint/UnusedMethodArgument:
   Enabled: false

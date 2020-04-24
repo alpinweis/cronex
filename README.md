@@ -26,6 +26,7 @@ For a quick intro to cron see Quartz [Cron Tutorial](http://www.quartz-scheduler
 * Brazilian
 * French
 * German
+* Italian
 * Romanian
 * Russian
 

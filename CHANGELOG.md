@@ -1,3 +1,6 @@
+### [0.9.2] - 2020-04-24
+* Add italian locale
+
 ### [0.9.1] - 2019-11-26
 * Update tzinfo dependency
 
