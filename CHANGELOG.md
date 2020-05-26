@@ -1,3 +1,6 @@
+### [0.10.0] - 2020-05-26
+* Move locale and timezone arguments to options
+
 ### [0.9.2] - 2020-04-24
 * Add italian locale
 

@@ -4,8 +4,9 @@ require 'cronex'
 module Cronex
   describe ExpressionDescriptor do
 
-    def desc(expression, opts = {}, timezone = 'UTC')
-      Cronex::ExpressionDescriptor.new(expression, opts, 'it', timezone).description
+    def desc(expression, opts = {})
+      opts[:locale] = 'it'
+      Cronex::ExpressionDescriptor.new(expression, opts).description
     end
 
     let(:opts) { { zero_based_dow: false } }
@@ -376,26 +377,6 @@ module Cronex
 
       it 'year increments' do
         expect(desc('0 0 0 1 MAR * 2010/5')).to eq('Alle(ai) 12:00 AM, il giorno 1 del mese, solo a(nel) marzo, ogni 5 anni, a partire da 2010')
-      end
-    end
-
-    context 'timezone' do
-      it 'minute span' do
-        tz = TZInfo::Timezone.get('America/Los_Angeles')
-        hour = tz.period_for_local(Time.now).zone_identifier.to_s == 'PDT' ? 4 : 3
-        expect(desc('0-10 11 * * *', {}, 'America/Los_Angeles')).to eq("Ogni minuto tra le #{hour}:00 AM e le #{hour}:10 AM")
-      end
-
-      it 'twice a day' do
-        tz = TZInfo::Timezone.get('America/Los_Angeles')
-        hour = tz.period_for_local(Time.now).zone_identifier.to_s == 'PDT' ? 5 : 4
-        expect(desc('0 0,12 * * *', {}, 'America/Los_Angeles')).to eq("Alle(ai) #{hour}:00 PM e #{hour}:00 AM")
-      end
-
-      it 'ahead of GMT' do
-        tz = TZInfo::Timezone.get('Europe/Vienna')
-        hour = tz.period_for_local(Time.now).zone_identifier.to_s == 'CEST' ? 1 : 12
-        expect(desc('0-10 11 * * *', {}, 'Europe/Vienna')).to eq("Ogni minuto tra le #{hour}:00 PM e le #{hour}:10 PM")
       end
     end
   end

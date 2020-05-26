@@ -61,12 +61,12 @@ Or install it yourself as:
 
 #### Localization
 
-    Cronex::ExpressionDescriptor.new('30 2 * 2 1-5', {}, 'fr').description
+    Cronex::ExpressionDescriptor.new('30 2 * 2 1-5', locale: 'fr').description
     => À 2:30 AM, lundi à vendredi, seulement en février
 
 #### Timezones
 
-    Cronex::ExpressionDescriptor.new('0-10 11 * * *', {}, 'en', 'America/Los_Angeles').description
+    Cronex::ExpressionDescriptor.new('0-10 11 * * *', timezone: 'America/Los_Angeles').description
     => Every minute between 4:00 AM and 4:10 AM # PDT or
     => Every minute between 3:00 AM and 3:10 AM # PST
 

@@ -4,8 +4,9 @@ require 'cronex'
 module Cronex
   describe ExpressionDescriptor do
 
-    def desc(expression, opts = {}, timezone = 'UTC')
-      Cronex::ExpressionDescriptor.new(expression, opts, 'de', timezone).description
+    def desc(expression, opts = {})
+      opts[:locale] = 'de'
+      Cronex::ExpressionDescriptor.new(expression, opts).description
     end
 
     let(:opts) { { zero_based_dow: false } }
