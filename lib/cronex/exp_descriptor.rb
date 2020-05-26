@@ -12,19 +12,21 @@ module Cronex
     verbose: false,
     zero_based_dow: true,
     use_24_hour_time_format: false,
-    throw_exception_on_parse_error: true
+    throw_exception_on_parse_error: true,
+    locale: nil,
+    timezone: nil
   }
 
   class ExpressionDescriptor
     attr_accessor :expression, :expression_parts, :options, :parsed, :resources, :timezone
 
-    def initialize(expression, options = {}, locale = nil, timezone = 'UTC')
+    def initialize(expression, options = {})
       @expression = expression
       @options = CRONEX_OPTS.merge(options)
       @expression_parts = []
       @parsed = false
-      @resources = Cronex::Resource.new(locale)
-      @timezone = timezone
+      @resources = Cronex::Resource.new(@options[:locale])
+      @timezone = @options[:timezone] || 'UTC'
     end
 
     def to_hash

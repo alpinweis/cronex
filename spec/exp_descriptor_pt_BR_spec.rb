@@ -5,7 +5,8 @@ module Cronex
   describe ExpressionDescriptor do
 
     def desc(expression, opts = {})
-      Cronex::ExpressionDescriptor.new(expression, opts, 'pt_BR').description
+      opts[:locale] = 'pt_BR'
+      Cronex::ExpressionDescriptor.new(expression, opts).description
     end
 
     let(:opts) { { zero_based_dow: false } }
