@@ -1,7 +1,7 @@
 module Cronex
   class DayOfMonthDescription < Description
     def single_item_description(expression)
-      expression
+      expression == 'L' ? resources.get('last_day') : expression
     end
 
     def interval_description_format(expression)
