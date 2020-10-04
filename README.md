@@ -18,7 +18,7 @@ Original Author & Credit: Brady Holt (http://www.geekytidbits.com).
  * Supports printing to locale specific human readable format
  * Supports displaying times in specific timezones
 
-For a quick intro to cron see Quartz [Cron Tutorial](http://www.quartz-scheduler.org/documentation/quartz-1.x/tutorials/crontrigger).
+For a quick intro to cron see Quartz [Cron Tutorial](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
 
 ## Available Locales
 
