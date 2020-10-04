@@ -1,3 +1,6 @@
+### [0.11.0] - 2020-10-05
+* Fix handling L in day of month expressions
+
 ### [0.10.0] - 2020-05-26
 * Move locale and timezone arguments to options
 

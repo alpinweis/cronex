@@ -9,13 +9,14 @@ on_the_of_the_month:                'il %s del mese'
 on_the_last_of_the_month:           "l'ultimo(a) %s del mese"
 on_the_last_day_of_the_month:       "l'ultimo giorno del mese"
 on_the_last_weekday_of_the_month:   "l'ultimo giorno lavorativo del mese"
-between_days_of_the_month:          'tra il giorno %s e il giorno %s del mese'
+between_days_of_the_month:          'tra il giorno %s e il %s del mese'
 seconds_through_past_the_minute:    'dal secondo %s al %s dopo il minuto'
 between_x_and_y:                    'tra le %s e le %s'
 past_the_hour:                      "dopo l'ora"
 at_x_seconds_past_the_minute:       'a %s secondi dopo il minuto'
 minutes_through_past_the_hour:      "dal minuto %s al %s dopo l'ora"
 on_day_of_the_month:                'il giorno %s del mese'
+last_day:                           'ultimo giorno'
 first_weekday:                      'il primo giorno della settimana lavorativa'
 weekday_nearest_day:                'il prossimo giorno %s della settimana lavorativa'
 starting:             'a partire da'

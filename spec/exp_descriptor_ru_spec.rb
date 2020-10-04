@@ -178,11 +178,11 @@ module Cronex
     end
 
     it 'day of month' do
-      expect(desc('23 12 15 * *')).to eq('В 12:23 PM, 15 число месяца')
+      expect(desc('23 12 15 * *')).to eq('В 12:23 PM, 15 день месяца')
     end
 
     it 'day of month with day of week' do
-      expect(desc('23 12 15 * SUN')).to eq('В 12:23 PM, 15 число месяца, только воскресенье')
+      expect(desc('23 12 15 * SUN')).to eq('В 12:23 PM, 15 день месяца, только воскресенье')
     end
 
     it 'month name' do
@@ -239,8 +239,14 @@ module Cronex
       end
     end
 
-    it 'last day of the month' do
-      expect(desc('*/5 * L JAN *')).to eq('Каждые 5 минут, в последний день месяца, только январь')
+    context 'last day of the month:' do
+      it 'on the last day of the month' do
+        expect(desc('*/5 * L JAN *')).to eq('Каждые 5 минут, в последний день месяца, только январь')
+      end
+
+      it 'between a day and last day of the month' do
+        expect(desc('*/5 * 23-L JAN *')).to eq('Каждые 5 минут, между 23 днем и последним днем месяца, только январь')
+      end
     end
 
     it 'time of day with seconds' do
@@ -253,7 +259,7 @@ module Cronex
 
     it 'second minutes hours intervals' do
       expect(desc('5-10 30-35 10-12 * * *')).to eq(
-        'Секунды с 5 по 10, минуты с 30 по 35, с 10:00 AM по 12:59 PM')
+        'Секунды с 5 по 10, минуты с 30 по 35, между 10:00 AM и 12:59 PM')
     end
 
     it 'every 5 minutes at 30 seconds' do
@@ -262,7 +268,7 @@ module Cronex
 
     it 'minutes past the hour range' do
       expect(desc('0 30 10-13 ? * WED,FRI')).to eq(
-        'В 30 минут часа, с 10:00 AM по 1:59 PM, только среда и пятница')
+        'В 30 минут часа, между 10:00 AM и 1:59 PM, только среда и пятница')
     end
 
     it 'seconds past the minute interval' do
@@ -271,7 +277,7 @@ module Cronex
 
     it 'between with interval' do
       expect(desc('2-59/3 1,9,22 11-26 1-6 ?')).to eq(
-        'Каждые 3 минут, минуты с 02 по 59, в 1:00 AM, 9:00 AM и 10:00 PM, с 11 по 26 число месяца, январь - июнь')
+        'Каждые 3 минут, минуты с 02 по 59, в 1:00 AM, 9:00 AM и 10:00 PM, между 11 днем и 26 днем месяца, январь - июнь')
     end
 
     it 'recurring first of month' do
@@ -328,11 +334,11 @@ module Cronex
       end
 
       it 'minutes past the hour 5,10 day 2' do
-        expect(desc('5,10 0 2 * *')).to eq('В 05 и 10 минут часа, 2 число месяца')
+        expect(desc('5,10 0 2 * *')).to eq('В 05 и 10 минут часа, 2 день месяца')
       end
 
       it 'minutes past the hour 5/10 day 2' do
-        expect(desc('5/10 0 2 * *')).to eq('Каждые 10 минут, начало в 05 минут часа, 2 число месяца')
+        expect(desc('5/10 0 2 * *')).to eq('Каждые 10 минут, начало в 05 минут часа, 2 день месяца')
       end
     end
 
@@ -346,7 +352,7 @@ module Cronex
       end
 
       it 'seconds past the minute 5,6 day 2' do
-        expect(desc('5,6 0 0 2 * *')).to eq('В 5 и 6 секунд, 2 число месяца')
+        expect(desc('5,6 0 0 2 * *')).to eq('В 5 и 6 секунд, 2 день месяца')
       end
     end
 
@@ -364,7 +370,7 @@ module Cronex
       end
 
       it 'day of month increments' do
-        expect(desc('0 30 8 2/7 * *')).to eq('В 8:30 AM, каждые 7 дня(ей), начало 2 число месяца')
+        expect(desc('0 30 8 2/7 * *')).to eq('В 8:30 AM, каждые 7 дня(ей), начало 2 день месяца')
       end
 
       it 'day of week increments' do
@@ -376,7 +382,7 @@ module Cronex
       end
 
       it 'year increments' do
-        expect(desc('0 0 0 1 MAR * 2010/5')).to eq('В 12:00 AM, 1 число месяца, только март, каждые 5 лет, начало в 2010')
+        expect(desc('0 0 0 1 MAR * 2010/5')).to eq('В 12:00 AM, 1 день месяца, только март, каждые 5 лет, начало в 2010')
       end
     end
   end

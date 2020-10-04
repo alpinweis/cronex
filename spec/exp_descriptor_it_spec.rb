@@ -239,8 +239,14 @@ module Cronex
       end
     end
 
-    it 'last day of the month' do
-      expect(desc('*/5 * L JAN *')).to eq('Ogni 5 minuti, l\'ultimo giorno del mese, solo a(nel) gennaio')
+    context 'last day of the month:' do
+      it 'on the last day of the month' do
+        expect(desc('*/5 * L JAN *')).to eq('Ogni 5 minuti, l\'ultimo giorno del mese, solo a(nel) gennaio')
+      end
+
+      it 'between a day and last day of the month' do
+        expect(desc('*/5 * 23-L JAN *')).to eq('Ogni 5 minuti, tra il giorno 23 e il ultimo giorno del mese, solo a(nel) gennaio')
+      end
     end
 
     it 'time of day with seconds' do
@@ -271,7 +277,7 @@ module Cronex
 
     it 'between with interval' do
       expect(desc('2-59/3 1,9,22 11-26 1-6 ?')).to eq(
-        'Ogni 3 minuti, dal minuto 02 al 59 dopo l\'ora, alle(ai) 1:00 AM, 9:00 AM e 10:00 PM, tra il giorno 11 e il giorno 26 del mese, da gennaio a giugno')
+        'Ogni 3 minuti, dal minuto 02 al 59 dopo l\'ora, alle(ai) 1:00 AM, 9:00 AM e 10:00 PM, tra il giorno 11 e il 26 del mese, da gennaio a giugno')
     end
 
     it 'recurring first of month' do
