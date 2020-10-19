@@ -405,5 +405,9 @@ module Cronex
         expect(desc('0-10 11 * * *', timezone: 'Europe/Vienna')).to eq("Every minute between #{hour}:00 PM and #{hour}:10 PM")
       end
     end
+
+    it 'every few days' do
+      expect(desc('30 7 1-L/2 * *')).to eq('At 7:30 AM, every 2 days, between day 1 and the last day of the month')
+    end
   end
 end
