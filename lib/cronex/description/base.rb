@@ -12,11 +12,11 @@ module Cronex
       ['/', '-', ',']
     end
 
-    def segment_description(expression, all_description)
+    def segment_description(expression, all_values_description)
       if expression.empty? || expression == '0'
         desc = ''
       elsif expression == '*'
-        desc = all_description
+        desc = all_values_description
       elsif !Cronex::Utils.include_any?(expression, special_chars)
         desc = format(description_format(expression), single_item_description(expression))
       elsif expression.include?('/')

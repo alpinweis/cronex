@@ -1,3 +1,6 @@
+### [0.11.1] - 2020-10-21
+* Fix two consecutive commas in interval expressions
+
 ### [0.11.0] - 2020-10-05
 * Fix handling L in day of month expressions
 
