@@ -385,5 +385,9 @@ module Cronex
         expect(desc('0 0 0 1 MAR * 2010/5')).to eq('Um 12:00 AM, am 1 Tag des Monats, nur in März, Alle 5 Jahren, beginnend in 2010')
       end
     end
+
+    it 'every few days' do
+      expect(desc('30 7 1-L/2 * *')).to eq('Um 7:30 AM, Alle 2 Tagen, zwischen Tag 1 und der letzte Tag des Monats')
+    end
   end
 end

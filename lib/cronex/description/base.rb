@@ -26,10 +26,12 @@ module Cronex
         if segments[0].include?('-')
           between_segment_of_interval = segments[0]
           between_segments = between_segment_of_interval.split('-')
-          desc += ', ' + format(
+          between = format(
             between_description_format(between_segment_of_interval),
             single_item_description(between_segments[0]),
             single_item_description(between_segments[1]).gsub(':00', ':59'))
+          desc += ', ' if !between.start_with?(', ')
+          desc += between
         elsif !Cronex::Utils.include_any?(segments[0], special_chars + ['*'])
           desc += ', ' + format(starting_description_format(segments[0]), single_item_description(segments[0]))
         end
