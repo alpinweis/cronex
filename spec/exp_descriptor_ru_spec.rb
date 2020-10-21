@@ -298,6 +298,10 @@ module Cronex
         'Каждые 2 минут, минуты с 00 по 30, в 5:00 PM, понедельник - пятница')
     end
 
+    it 'every x days with interval' do
+      expect(desc('30 7 1-L/2 * *')).to eq('В 7:30 AM, каждые 2 дня(ей), между 1 днем и последним днем месяца')
+    end
+
     it 'one year only with seconds' do
       expect(desc('* * * * * * 2013')).to eq('Каждую секунду, только 2013')
     end
@@ -384,10 +388,6 @@ module Cronex
       it 'year increments' do
         expect(desc('0 0 0 1 MAR * 2010/5')).to eq('В 12:00 AM, 1 день месяца, только март, каждые 5 лет, начало в 2010')
       end
-    end
-
-    it 'every few days' do
-      expect(desc('30 7 1-L/2 * *')).to eq('В 7:30 AM, каждые 2 дня(ей), между 1 днем и последним днем месяца')
     end
   end
 end

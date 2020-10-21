@@ -298,6 +298,10 @@ module Cronex
         'A cada 2 minutos, entre 00 e 30 minutos após a hora, 5:00 PM, de segunda-feira a sexta-feira')
     end
 
+    it 'every x days with interval' do
+      expect(desc('30 7 1-L/2 * *')).to eq('Às 7:30 AM, a cada 2 dias, entre os dias 1 e último dia do mês')
+    end
+
     it 'one year only with seconds' do
       expect(desc('* * * * * * 2013')).to eq('A cada segundo, em 2013')
     end
@@ -384,10 +388,6 @@ module Cronex
       it 'year increments' do
         expect(desc('0 0 0 1 MAR * 2010/5')).to eq('Às 12:00 AM, no dia 1 do mês, em março, a cada 5 anos, iniciando em 2010')
       end
-    end
-
-    it 'every few days' do
-      expect(desc('30 7 1-L/2 * *')).to eq('Às 7:30 AM, a cada 2 dias, entre os dias 1 e último dia do mês')
     end
   end
 end
