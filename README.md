@@ -1,7 +1,7 @@
 # Cronex
 
 [![Gem Version](https://badge.fury.io/rb/cronex.svg)](https://badge.fury.io/rb/cronex)
-[![Build Status](https://travis-ci.org/alpinweis/cronex.svg?branch=master)](https://travis-ci.org/alpinweis/cronex)
+[![Build Status](https://github.com/alpinweis/cronex/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/alpinweis/cronex/actions/workflows/test.yml?query=branch%3Amaster)
 
 A Ruby library that converts cron expressions into human readable strings.
 Translated to Ruby from [cron-expression-descriptor](https://github.com/bradyholt/cron-expression-descriptor) (C#) via
