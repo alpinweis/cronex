@@ -27,6 +27,7 @@ module Cronex
       if len < 5
         fail ExpressionError, "Error: Expression only has #{len} parts. At least 5 parts are required"
       elsif len == 5
+        fail ExpressionError, "Error: Expression only has 5 parts. For 'strict_quartz' option, at least 6 parts are required" if options[:strict_quartz]
         # 5 part CRON so shift array past seconds element
         parsed_parts.insert(1, *parts)
       elsif len == 6

@@ -390,6 +390,12 @@ module Cronex
       end
     end
 
+    context 'strict_quartz' do
+      it '5 part cron fails' do
+        expect { desc('* * * * *', { strict_quartz: true }) }.to raise_error(Cronex::ExpressionError)
+      end
+    end
+
     context 'timezone' do
       it 'minute span' do
         tz = TZInfo::Timezone.get('America/Los_Angeles')
