@@ -70,6 +70,11 @@ Or install it yourself as:
     => Every minute between 4:00 AM and 4:10 AM # PDT or
     => Every minute between 3:00 AM and 3:10 AM # PST
 
+### Strict quartz-scheduler implementation support
+
+    Cronex::ExpressionDescriptor.new('* * * * *', strict_quartz: true).description
+    => Cronex::ExpressionError (Error: Expression only has 5 parts. For 'strict_quartz' option, at least 6 parts are required)
+
 See spec tests for more examples.
 
 ### Contributing
