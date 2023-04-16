@@ -13,9 +13,9 @@ module Cronex
     zero_based_dow: true,
     use_24_hour_time_format: false,
     throw_exception_on_parse_error: true,
+    strict_quartz: false,
     locale: nil,
-    timezone: nil,
-    strict_quartz: false
+    timezone: nil
   }
 
   class ExpressionDescriptor

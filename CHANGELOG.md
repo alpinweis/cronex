@@ -1,3 +1,6 @@
+### [0.12.0] - 2023-04-16
+* Add "strict_quartz" option for Java Quartz implementation (quartz-scheduler)
+
 ### [0.11.1] - 2020-10-21
 * Fix two consecutive commas in interval expressions
 

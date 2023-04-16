@@ -392,7 +392,7 @@ module Cronex
 
     context 'strict_quartz' do
       it '5 part cron fails' do
-        expect { desc('* * * * *', { strict_quartz: true }) }.to raise_error(Cronex::ExpressionError)
+        expect { desc('* * * * *', strict_quartz: true) }.to raise_error(Cronex::ExpressionError)
       end
     end
 
