@@ -333,22 +333,30 @@ module Cronex
     end
 
     context 'minutes past the hour:' do
+      it 'minutes past the hour 5,10, midnight hour' do
+        expect(desc('5,10 0 * * *')).to eq('La 05 și 10 minute în fiecare oră, la 12:00 AM')
+      end
+
       it 'minutes past the hour 5,10' do
-        expect(desc('5,10 0 * * *')).to eq('La 05 și 10 minute în fiecare oră')
+        expect(desc('5,10 * * * *')).to eq('La 05 și 10 minute în fiecare oră')
       end
 
       it 'minutes past the hour 5,10 day 2' do
-        expect(desc('5,10 0 2 * *')).to eq('La 05 și 10 minute în fiecare oră, în a 2-a zi a lunii')
+        expect(desc('5,10 * 2 * *')).to eq('La 05 și 10 minute în fiecare oră, în a 2-a zi a lunii')
       end
 
       it 'minutes past the hour 5/10 day 2' do
-        expect(desc('5/10 0 2 * *')).to eq('La fiecare 10 minute, pornire la 05 minute în fiecare oră, în a 2-a zi a lunii')
+        expect(desc('5/10 * 2 * *')).to eq('La fiecare 10 minute, pornire la 05 minute în fiecare oră, în a 2-a zi a lunii')
       end
     end
 
     context 'seconds past the minute:' do
+      it 'seconds past the minute 5,6, midnight hour' do
+        expect(desc('5,6 0 0 * * *')).to eq('La secunda 5 și 6, la 12:00 AM')
+      end
+
       it 'seconds past the minute 5,6' do
-        expect(desc('5,6 0 0 * * *')).to eq('La secunda 5 și 6')
+        expect(desc('5,6 0 * * * *')).to eq('La secunda 5 și 6')
       end
 
       it 'seconds past the minute 5,6 at 1' do
@@ -356,7 +364,7 @@ module Cronex
       end
 
       it 'seconds past the minute 5,6 day 2' do
-        expect(desc('5,6 0 0 2 * *')).to eq('La secunda 5 și 6, în a 2-a zi a lunii')
+        expect(desc('5,6 0 * 2 * *')).to eq('La secunda 5 și 6, în a 2-a zi a lunii')
       end
     end
 

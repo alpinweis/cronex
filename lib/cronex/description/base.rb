@@ -13,7 +13,7 @@ module Cronex
     end
 
     def segment_description(expression, all_values_description)
-      if expression.empty? || expression == '0'
+      if expression.empty? || (expression == '0' && self.class != Cronex::HoursDescription)
         desc = ''
       elsif expression == '*'
         desc = all_values_description

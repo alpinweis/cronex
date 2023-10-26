@@ -333,22 +333,30 @@ module Cronex
     end
 
     context 'minutes past the hour:' do
+      it 'minutes past the hour 5,10, midnight hour' do
+        expect(desc('5,10 0 * * *')).to eq("À 05 et 10 minutes après l'heure, à 12:00 AM")
+      end
+
       it 'minutes past the hour 5,10' do
-        expect(desc('5,10 0 * * *')).to eq("À 05 et 10 minutes après l'heure")
+        expect(desc('5,10 * * * *')).to eq("À 05 et 10 minutes après l'heure")
       end
 
       it 'minutes past the hour 5,10 day 2' do
-        expect(desc('5,10 0 2 * *')).to eq("À 05 et 10 minutes après l'heure, le 2 de chaque mois")
+        expect(desc('5,10 * 2 * *')).to eq("À 05 et 10 minutes après l'heure, le 2 de chaque mois")
       end
 
       it 'minutes past the hour 5/10 day 2' do
-        expect(desc('5/10 0 2 * *')).to eq("Tous les 10 minutes, commence à 05 minutes après l'heure, le 2 de chaque mois")
+        expect(desc('5/10 * 2 * *')).to eq("Tous les 10 minutes, commence à 05 minutes après l'heure, le 2 de chaque mois")
       end
     end
 
     context 'seconds past the minute:' do
+      it 'seconds past the minute 5,6, midnight hour' do
+        expect(desc('5,6 0 0 * * *')).to eq('À 5 et 6 secondes après la minute, à 12:00 AM')
+      end
+
       it 'seconds past the minute 5,6' do
-        expect(desc('5,6 0 0 * * *')).to eq('À 5 et 6 secondes après la minute')
+        expect(desc('5,6 0 * * * *')).to eq('À 5 et 6 secondes après la minute')
       end
 
       it 'seconds past the minute 5,6 at 1' do
@@ -356,7 +364,7 @@ module Cronex
       end
 
       it 'seconds past the minute 5,6 day 2' do
-        expect(desc('5,6 0 0 2 * *')).to eq('À 5 et 6 secondes après la minute, le 2 de chaque mois')
+        expect(desc('5,6 0 * 2 * *')).to eq('À 5 et 6 secondes après la minute, le 2 de chaque mois')
       end
     end
 
