@@ -46,7 +46,7 @@ module Cronex
         expect(desc('*/5 0 * * *')).to eq('Every 5 minutes, at 12:00 AM')
       end
 
-      it 'every 5 minute 0 */5' do
+      it 'every 5 minutes 0 */5' do
         expect(desc('0 */5 * * * *')).to eq('Every 5 minutes')
       end
 
@@ -297,12 +297,12 @@ module Cronex
         'At 00, 05, 10, 15, 20, 25, 30, 35, 40, 45, 50 and 55 minutes past the hour')
     end
 
-    it 'every x minute past the hour with interval' do
+    it 'every X minutes past the hour with interval' do
       expect(desc('0 0-30/2 17 ? * MON-FRI')).to eq(
         'Every 2 minutes, minutes 00 through 30 past the hour, at 5:00 PM, Monday through Friday')
     end
 
-    it 'every x days with interval' do
+    it 'every X days with interval' do
       expect(desc('30 7 1-L/2 * *')).to eq('At 7:30 AM, every 2 days, between day 1 and the last day of the month')
     end
 
