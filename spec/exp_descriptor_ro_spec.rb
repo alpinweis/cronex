@@ -42,7 +42,11 @@ module Cronex
         expect(desc('*/5 * * * *')).to eq('La fiecare 5 minute')
       end
 
-      it 'every 5 minute 0 */5' do
+      it 'every 5 minutes at Midnight' do
+        expect(desc('*/5 0 * * *')).to eq('La fiecare 5 minute, la 12:00 AM')
+      end
+
+      it 'every 5 minutes 0 */5' do
         expect(desc('0 */5 * * * *')).to eq('La fiecare 5 minute')
       end
 
@@ -293,12 +297,12 @@ module Cronex
         'La 00, 05, 10, 15, 20, 25, 30, 35, 40, 45, 50 și 55 minute în fiecare oră')
     end
 
-    it 'every x minute past the hour with interval' do
+    it 'every X minutes past the hour with interval' do
       expect(desc('0 0-30/2 17 ? * MON-FRI')).to eq(
         'La fiecare 2 minute, între minutele 00 și 30, la 5:00 PM, de luni până vineri')
     end
 
-    it 'every x days with interval' do
+    it 'every X days with interval' do
       expect(desc('30 7 1-L/2 * *')).to eq('La 7:30 AM, la fiecare 2 zile, între zilele 1 și ultima zi a lunii')
     end
 

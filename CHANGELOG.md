@@ -1,3 +1,6 @@
+### [0.13.0] - 2023-11-04
+* Fix zero hour
+
 ### [0.12.0] - 2023-04-16
 * Add "strict_quartz" option for Java Quartz implementation (quartz-scheduler)
 
