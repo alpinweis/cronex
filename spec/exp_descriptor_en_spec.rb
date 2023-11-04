@@ -42,6 +42,10 @@ module Cronex
         expect(desc('*/5 * * * *')).to eq('Every 5 minutes')
       end
 
+      it 'every 5 minutes at Midnight' do
+        expect(desc('*/5 0 * * *')).to eq('Every 5 minutes, at 12:00 AM')
+      end
+
       it 'every 5 minute 0 */5' do
         expect(desc('0 */5 * * * *')).to eq('Every 5 minutes')
       end
@@ -333,22 +337,30 @@ module Cronex
     end
 
     context 'minutes past the hour:' do
+      it 'minutes past the hour 5,10, midnight hour' do
+        expect(desc('5,10 0 * * *')).to eq('At 05 and 10 minutes past the hour, at 12:00 AM')
+      end
+
       it 'minutes past the hour 5,10' do
-        expect(desc('5,10 0 * * *')).to eq('At 05 and 10 minutes past the hour')
+        expect(desc('5,10 * * * *')).to eq('At 05 and 10 minutes past the hour')
       end
 
       it 'minutes past the hour 5,10 day 2' do
-        expect(desc('5,10 0 2 * *')).to eq('At 05 and 10 minutes past the hour, on day 2 of the month')
+        expect(desc('5,10 * 2 * *')).to eq('At 05 and 10 minutes past the hour, on day 2 of the month')
       end
 
       it 'minutes past the hour 5/10 day 2' do
-        expect(desc('5/10 0 2 * *')).to eq('Every 10 minutes, starting at 05 minutes past the hour, on day 2 of the month')
+        expect(desc('5/10 * 2 * *')).to eq('Every 10 minutes, starting at 05 minutes past the hour, on day 2 of the month')
       end
     end
 
     context 'seconds past the minute:' do
+      it 'seconds past the minute 5,6, midnight hour' do
+        expect(desc('5,6 0 0 * * *')).to eq('At 5 and 6 seconds past the minute, at 12:00 AM')
+      end
+
       it 'seconds past the minute 5,6' do
-        expect(desc('5,6 0 0 * * *')).to eq('At 5 and 6 seconds past the minute')
+        expect(desc('5,6 0 * * * *')).to eq('At 5 and 6 seconds past the minute')
       end
 
       it 'seconds past the minute 5,6 at 1' do
@@ -356,7 +368,7 @@ module Cronex
       end
 
       it 'seconds past the minute 5,6 day 2' do
-        expect(desc('5,6 0 0 2 * *')).to eq('At 5 and 6 seconds past the minute, on day 2 of the month')
+        expect(desc('5,6 0 * 2 * *')).to eq('At 5 and 6 seconds past the minute, on day 2 of the month')
       end
     end
 
