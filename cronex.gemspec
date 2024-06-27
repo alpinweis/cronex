@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'tzinfo'
-  spec.add_runtime_dependency 'unicode', '~> 0.4.4.5'
+  spec.add_runtime_dependency 'unicode', '>= 0.4.4.5'
   spec.add_development_dependency 'pry', '~> 0.10'
   spec.add_development_dependency 'rake', '>= 12.3.3'
   spec.add_development_dependency 'rspec', '~> 3.1'
