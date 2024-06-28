@@ -1,3 +1,6 @@
+### [0.14.0] - 2024-06-28
+* Update unicode dependency
+
 ### [0.13.0] - 2023-11-04
 * Fix zero hour
 
