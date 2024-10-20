@@ -29,6 +29,7 @@ For a quick intro to cron see Quartz [Cron Tutorial](http://www.quartz-scheduler
 * Italian
 * Romanian
 * Russian
+* Dutch
 
 ## Installation
 
