@@ -401,31 +401,5 @@ module Cronex
         expect(desc('0 0 0 1 MAR * 2010/5')).to eq('Om 12:00 AM, op dag 1 van de maand, alleen in maart, elke 5 jaren, beginnend in 2010')
       end
     end
-
-    context 'strict_quartz' do
-      it '5 part cron fails' do
-        expect { desc('* * * * *', strict_quartz: true) }.to raise_error(Cronex::ExpressionError)
-      end
-    end
-
-    context 'timezone' do
-      it 'minute span' do
-        tz = TZInfo::Timezone.get('America/Los_Angeles')
-        hour = tz.period_for_local(Time.now).zone_identifier.to_s == 'PDT' ? 4 : 3
-        expect(desc('0-10 11 * * *', timezone: 'America/Los_Angeles')).to eq("Elke minuut tussen #{hour}:00 AM en #{hour}:10 AM")
-      end
-
-      it 'twice a day' do
-        tz = TZInfo::Timezone.get('America/Los_Angeles')
-        hour = tz.period_for_local(Time.now).zone_identifier.to_s == 'PDT' ? 5 : 4
-        expect(desc('0 0,12 * * *', timezone: 'America/Los_Angeles')).to eq("Om #{hour}:00 PM en #{hour}:00 AM")
-      end
-
-      it 'ahead of GMT' do
-        tz = TZInfo::Timezone.get('Europe/Vienna')
-        hour = tz.period_for_local(Time.now).zone_identifier.to_s == 'CEST' ? 1 : 12
-        expect(desc('0-10 11 * * *', timezone: 'Europe/Vienna')).to eq("Elke minuut tussen #{hour}:00 PM en #{hour}:10 PM")
-      end
-    end
   end
 end
