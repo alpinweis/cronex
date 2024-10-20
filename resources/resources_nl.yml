@@ -1,0 +1,76 @@
+# resources_nl.yml
+---
+expression_empty_exception:         'Expressie mag niet null of leeg zijn'
+interval_description_format:        'elke %s dagen van de week'
+between_description_format:         '%s tot en met %s'
+between_weekday_description_format: '%s tot en met %s'
+on_the_day_of_the_month:            'op de {{nth}} %s van de maand'
+on_the_of_the_month:                'op de %s van de maand'
+on_the_last_of_the_month:           'op de laatste %s van de maand'
+on_the_last_day_of_the_month:       'op de laatste dag van de maand'
+on_the_last_weekday_of_the_month:   'op de laatste werkdag van de maand'
+between_days_of_the_month:          'tussen dag %s en %s van de maand'
+seconds_through_past_the_minute:    'seconden %s tot en met %s na de minuut'
+between_x_and_y:                    'tussen %s en %s'
+past_the_hour:                      'na het uur'
+at_x_seconds_past_the_minute:       'op %s seconden na de minuut'
+minutes_through_past_the_hour:      'minuten %s tot en met %s na het uur'
+on_day_of_the_month:                'op dag %s van de maand'
+last_day:                           'de laatste dag'
+first_weekday:                      'eerste werkdag'
+weekday_nearest_day:                'werkdag het dichtst bij dag %s'
+starting:             'beginnend'
+only_on:              'alleen op %s'
+only_in:              'alleen in %s'
+every_x_seconds:      'elke %s seconden'
+every_minute_between: 'elke minuut tussen %s en %s'
+every_second:         'elke seconde'
+every_minute:         'elke minuut'
+every_1_minute:       'elke 1 minuut'
+every_hour:           'elk uur'
+every_1_hour:         'elk 1 uur'
+every_day:            'elke dag'
+every_1_day:          'elke 1 dag'
+every_year:           'elk jaar'
+every_x:              'elke %s'
+at_x:                 'om %s'
+on_x:                 'op %s'
+in_x:                 'in %s'
+first:     eerste
+second:    tweede
+third:     derde
+fourth:    vierde
+fifth:     vijfde
+time_pm:   PM
+time_am:   AM
+and:       en
+at:        om
+day:       dag
+days:      dagen
+hour:      uur
+hours:     uren
+minute:    minuut
+minutes:   minuten
+month:     maand
+months:    maanden
+year:      jaar
+years:     jaren
+monday:    maandag
+tuesday:   dinsdag
+wednesday: woensdag
+thursday:  donderdag
+friday:    vrijdag
+saturday:  zaterdag
+sunday:    zondag
+january:   januari
+february:  februari
+march:     maart
+april:     april
+may:       mei
+june:      juni
+july:      juli
+august:    augustus
+september: september
+october:   oktober
+november:  november
+december:  december
