@@ -1,3 +1,6 @@
+### [0.15.0] - 2024-10-20
+* Add dutch (nl) locale
+
 ### [0.14.0] - 2024-06-28
 * Update unicode dependency
 
