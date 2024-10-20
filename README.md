@@ -24,12 +24,12 @@ For a quick intro to cron see Quartz [Cron Tutorial](http://www.quartz-scheduler
 
 * English
 * Brazilian
+* Dutch
 * French
 * German
 * Italian
 * Romanian
 * Russian
-* Dutch
 
 ## Installation
 
